@@ -34,24 +34,72 @@
                 </svg>
             </button>
 
-            <button type="button" class="hidden md:flex">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                </svg>
 
-                <a href="{{ route('login') }}" class="text-sm font-semibold">
-                    <h1>Faça seu login <br> ou
-                        cadastra-se</h1>
-                </a>
 
-            </button>
+            @auth
+                <div>
+                    <span class="inline-flex rounded-md">
+                        <button x-on:click="toggleUser()" @click.away="isUserOpen = false" type="button"
+                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
+                            {{ Auth::user()->name }}
 
-            <button type="button" class="flex gap-1 text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                            <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                    </span>
+
+                    <template x-if="isUserOpen">
+                        <div class="z-50 fixed right-10 top-14 my-4 px-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow"
+                            id="dropdown-2">
+                            <div class="flex flex-col gap-3 px-4 py-3" role="none">
+                                <a href="" class="text-sm text-gray-900" role="none">
+                                    Minha Conta
+                                </a>
+
+                                <a href="" class="text-sm text-gray-900" role="none">
+                                    Meus Pedidos
+                                </a>
+                            </div>
+                            <ul class="py-1" role="none">
+                                <li>
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+
+                                        <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                            {{ __('Sair') }}
+                                        </x-dropdown-link>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </template>
+                </div>
+
+            @endauth
+
+            @guest
+                <button class="hidden sm:flex gap-1 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path fill-rule="evenodd"
+                            d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <a href="{{ route('login') }}" class="text-sm ">
+                        <h1 class="font-semibold">Faça seu login <br> <span class="font-medium">ou</span>
+                            cadastra-se</h1>
+                    </a>
+                </button>
+            @endguest
+
+            <button x-on:click="sidebar.navOpen = !sidebar.navOpen" type="button" class="flex gap-1 text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
                     <path
-                        d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+                        d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                 </svg>
             </button>
 
