@@ -4,7 +4,7 @@
     <section class="">
         <div class="relative lg:mt-0 lg:col-span-10 lg:flex">
             <div class="slideshow-container ">
-                
+
                 <div class="mySlides fade">
                     <img src="image/1.png" alt="" class="rounded-lg w-full h-52 sm:h-auto">
                 </div>
@@ -37,8 +37,28 @@
         </div>
     </section>
 
-    <section class=" my-14">
-        
+    <section id="container" class=" my-14">
+
+        <div id="card__container">
+            <div id="car__content">
+                <div>
+                    <article id="card__article">
+                        <div id="card__image">
+                            <img id="card__img" src="" alt="">
+                            <div id="card__shadow"></div>
+                        </div>
+
+                        <div id="card__data">
+                            <h3 id="car__name">Nome do Produto</h3>
+                            <p id="description">Descrição do produto</p>
+    
+                            <a href="" id="car__button">View More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <script>

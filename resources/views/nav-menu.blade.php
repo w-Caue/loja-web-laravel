@@ -21,7 +21,7 @@
                 </svg>
             </div>
             <input type="text" id="search-navbar"
-                class="block w-full p-3 ps-10 text-sm font-semibold text-gray-900 border-2 border-gray-200 rounded-full bg-white"
+                class="block w-full p-3 ps-10 text-sm font-semibold text-gray-900 border-2 border-gray-200 rounded-lg bg-white"
                 placeholder="Pesquisa">
         </div>
 
@@ -94,7 +94,7 @@
                     </svg>
 
                     <a href="{{ route('login') }}" class="text-sm ">
-                        <h1 class="font-semibold">Faça seu login <br> <span class="font-medium">ou</span>
+                        <h1 class="text-xs font-semibold">Faça seu login <br> <span class="font-medium">ou</span>
                             cadastra-se</h1>
                     </a>
                 </button>
