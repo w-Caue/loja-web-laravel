@@ -8,6 +8,8 @@
 
     <title>{{ 'LaraLoja' }}</title>
 
+    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -70,5 +72,8 @@
         }
     }
 </script>
+
+<script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 </html>

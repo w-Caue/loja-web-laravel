@@ -37,80 +37,121 @@
         </div>
     </section>
 
-    <section id="container" class=" my-14">
+    <h1 class="text-2xl font-semibold tracking-widest m-4">Produtos em Promoção</h1>
 
-        <div id="card__container">
-            <div id="car__content">
-                <div>
-                    <article id="card__article">
-                        <div id="card__image">
-                            <img id="card__img" src="" alt="">
-                            <div id="card__shadow"></div>
+    <section id="container" class="m-7 flex justify-end items-end">
+
+        <div id="card__container" class="swiper">
+            <div id="" class="card__content ms-4 rounded-md overflow-hidden h-full">
+                <div class="swiper-wrapper">
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/1.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
                         </div>
 
-                        <div id="card__data">
-                            <h3 id="car__name">Nome do Produto</h3>
-                            <p id="description">Descrição do produto</p>
-    
-                            <a href="" id="car__button">View More</a>
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
                         </div>
                     </article>
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/2.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
+                        </div>
+
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
+                        </div>
+                    </article>
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/3.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
+                        </div>
+
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
+                        </div>
+                    </article>
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/4.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
+                        </div>
+
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
+                        </div>
+                    </article>
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/5.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
+                        </div>
+
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
+                        </div>
+                    </article>
+
+                    <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
+                        <div class="relative pt-2 mb-[-44px]">
+                            <img src="image/img/6.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
+                        </div>
+
+                        <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
+                            <h3 id="card__name" class="text-lg font-semibold tracking-widest mb-1">Nome do Produto</h3>
+                            <p id="description" class="font-normal mb-2 tracking-wider">Descrição do produto</p>
+
+                            <a href="" id="card__button"
+                                class="bg-orange-600 p-1 rounded my-5 font-semibold text-white">View More</a>
+                        </div>
+                    </article>
+
                 </div>
+            </div>
+
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev left-0 w-11 h-11 after:contents">
+                <svg xmlns="http://www.w3.org/1600/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="swiper-button-next right-0 w-11 h-11 after:contents">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                    </path>
+                </svg>
             </div>
         </div>
 
     </section>
-
-    <script>
-        var slideIndex = 1;
-
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n)
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n)
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName('mySlides');
-
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-
-            slides[slideIndex - 1].style.display = 'block';
-        }
-
-        //auto slide
-        var slideIndex = 0;
-        showSlidess();
-
-        function showSlidess() {
-            var i;
-            var slides = document.getElementsByClassName('mySlides');
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-
-            slideIndex++;
-
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlidess, 3000);
-        }
-    </script>
+    {{-- <!-- Pagination -->
+    <div class="swiper-pagination"></div> --}}
 @endsection
