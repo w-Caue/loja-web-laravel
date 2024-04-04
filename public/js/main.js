@@ -52,16 +52,13 @@ function showSlidess() {
 }
 /* /Header */
 
-/* /Slider Products */
+
+/* --SWIPER-- */
+/* --Slider Products-- */
 let swiperCards = new Swiper('.card__content', {
     loop: false,
     spaceBetween: 20,
     grapCursor: true,
-
-
-    // autoplay: {
-    //     delay: 2000,
-    //   },
 
     pagination: {
         el: '.swiper-pagination',
@@ -86,4 +83,14 @@ let swiperCards = new Swiper('.card__content', {
         },
     },
 });
-/* /Slider Products */
+/* -/-Slider Products-/- */
+
+let swiperGride = new Swiper('.grid__content', {
+    slidesPerView: 3,
+    // fill: column,
+    grid: {
+        rows: 2,
+        fill: 2,
+    },
+    spaceBetween: 30,
+});

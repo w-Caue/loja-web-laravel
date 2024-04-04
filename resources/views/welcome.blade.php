@@ -1,43 +1,42 @@
 @extends('layouts.ecommerce')
 
 @section('content')
+    <nav class="hidden sm:block bg-white">
+        <hr class="h-px mx-72 bg-gray-200 border-0 ">
+        <div class="flex justify-center items-center gap-7 p-2 uppercase">
+            <a href=""
+                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Promoções</a>
+            <a href=""
+                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Camisas</a>
+            <a href=""
+                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Novidades</a>
+            <a href=""
+                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Destaques</a>
+        </div>
+    </nav>
+
     <section class="">
         <div class="relative lg:mt-0 lg:col-span-10 lg:flex">
             <div class="slideshow-container ">
 
                 <div class="mySlides fade">
-                    <img src="image/1.png" alt="" class="rounded-lg w-full h-52 sm:h-auto">
+                    <img src="image/1.png" alt="" class="rounded-b-lg w-full h-52 sm:h-auto">
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="image/2.png" alt="" class="rounded-lg w-full h-52 sm:h-auto">
+                    <img src="image/2.png" alt="" class="rounded-b-lg w-full h-52 sm:h-auto">
 
                 </div>
 
             </div>
-
-            {{-- <div class="absolute top-48 flex justify-between w-full">
-                <button onclick="plusSlides(-1)" class="prev bg-gray-200 p-2 mx-1 rounded-full">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m15 19-7-7 7-7" />
-                    </svg>
-                </button>
-
-                <button onclick="plusSlides(1)" class="next bg-gray-200 p-2 mx-1 rounded-full">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m9 5 7 7-7 7" />
-                    </svg>
-                </button>
-            </div> --}}
-
         </div>
     </section>
 
-    <h1 class="text-2xl font-semibold tracking-widest m-4">Produtos em Promoção</h1>
+    <div class="flex justify-center items-center mt-20">
+        <hr class="h-px w-56 bg-gray-300 border-0 ">
+        <h1 class="text-4xl uppercase font-semibold tracking-widest mx-4 ">Em Promoção</h1>
+        <hr class="h-px w-56 bg-gray-300 border-0 ">
+    </div>
 
     <section id="container" class="m-7 flex justify-end items-end">
 
@@ -152,6 +151,45 @@
         </div>
 
     </section>
-    {{-- <!-- Pagination -->
-    <div class="swiper-pagination"></div> --}}
+
+    <div class="flex justify-center items-center mt-32">
+        <hr class="h-px w-56 bg-gray-300 border-0 ">
+        <h1 class="text-4xl uppercase font-semibold tracking-widest mx-4 ">Destaques</h1>
+        <hr class="h-px w-56 bg-gray-300 border-0 ">
+    </div>
+
+    <section>
+        <div class="swiper-container h-full grid__content">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/1.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/2.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/4.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/1.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/2.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/4.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/1.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+                <div class="swiper-slide h-[(calc(100% - 30px) / 2])">
+                    <img src="image/img/4.jpeg" alt="" class="w-full h-full rounded-lg">
+                </div>
+
+            </div>
+        </div>
+    </section>
 @endsection
