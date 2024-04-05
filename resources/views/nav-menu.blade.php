@@ -1,6 +1,6 @@
 <nav class="bg-white border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
-        <button class="block md:hidden">
+        <button x-on:click="sidebarMenu.menuOpen = !sidebarMenu.menuOpen" class="block md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                 class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -9,7 +9,7 @@
 
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Logo</span>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap ">Logo</span>
         </a>
 
         <div class="relative hidden md:block w-1/2">
@@ -35,7 +35,7 @@
             </button>
 
             @auth
-                <div>
+                <div class="hidden sm:block">
                     <span class="inline-flex rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
                             <path fill-rule="evenodd"
@@ -100,7 +100,16 @@
                 </button>
             @endguest
 
-            <button x-on:click="sidebar.navOpen = !sidebar.navOpen" type="button" class="flex gap-1">
+            {{-- <button x-on:click="sidebarCar.navOpen = !sidebarCar.navOpen" type="button" class="flex gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </button> --}}
+
+            {{-- Teste --}}
+            <button x-on:click="sidebarMenu.menuOpen = !sidebarMenu.menuOpen" type="button" class="flex gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"

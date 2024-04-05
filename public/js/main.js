@@ -73,7 +73,7 @@ let swiperCards = new Swiper('.card__content', {
 
     breakpoints: {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         600: {
             slidesPerView: 3,
@@ -86,11 +86,12 @@ let swiperCards = new Swiper('.card__content', {
 /* -/-Slider Products-/- */
 
 let swiperGride = new Swiper('.grid__content', {
-    slidesPerView: 3,
-    // fill: column,
+    slidesPerView: 4,
+
     grid: {
         rows: 2,
         fill: 2,
     },
-    spaceBetween: 30,
+
+    spaceBetween: 20,
 });

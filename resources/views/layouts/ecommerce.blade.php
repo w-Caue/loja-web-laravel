@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ 'LaraLoja' }}</title>
+    <title>{{ 'Ecommerce' }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
 
@@ -32,6 +32,7 @@
         @include('nav-menu')
 
         @include('layouts.ecommerce.sidebar-carrinho')
+        @include('layouts.ecommerce.sidebar-menu')
 
         <!-- Page Content -->
         <main>
@@ -47,14 +48,18 @@
 <script>
     function data() {
         return {
-            slides: ['image/1.png'],
+            
             isUserOpen: false,
             toggleUser() {
                 this.isUserOpen = !this.isUserOpen
             },
-            sidebar: {
+            sidebarCar: {
                 full: false,
                 navOpen: false
+            },
+            sidebarMenu: {
+                full: false,
+                menuOpen: false
             },
             tooltip: {
                 show: false,

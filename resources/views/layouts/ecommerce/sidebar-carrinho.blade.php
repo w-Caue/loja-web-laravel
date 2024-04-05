@@ -2,14 +2,14 @@
 
     <div class="h-screen z-20 flex-shrink-0 bg-white transition-all duration-300 space-y-2 fixed"
         x-bind:class="{
-            'w-96': !sidebar.full,
-            'top-0 right-0': sidebar
+            'w-96': !sidebarCar.full,
+            'top-0 right-0': sidebarCar
                 .navOpen,
-            'top-0 -right-96': !sidebar.navOpen
+            'top-0 -right-96': !sidebarCar.navOpen
         }">
 
-        <!-- {{-- Sidebar Toggle --}} -->
-        <button x-on:click="sidebar.navOpen = !sidebar.navOpen" 
+        <!-- {{-- sidebarCar Toggle --}} -->
+        <button x-on:click="sidebarCar.navOpen = !sidebarCar.navOpen" 
             class="focus:outline-none absolute right-80 top-6 p-1 text-white bg-blue-500 rounded-full shadow-md">
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
