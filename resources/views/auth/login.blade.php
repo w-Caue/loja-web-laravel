@@ -75,13 +75,13 @@
                     <div class="flex gap-7 mt-4">
                         <div>
                             <x-label for="password" value="{{ __('Senha') }}" />
-                            <x-input id="password" class="block mt-1 w-44" type="password" name="password" required
+                            <x-input id="password" class="block mt-1 sm:w-44 w-36" type="password" name="password" required
                                 autocomplete="new-password" />
                         </div>
 
                         <div>
                             <x-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
-                            <x-input id="password_confirmation" class="block mt-1 w-44" type="password"
+                            <x-input id="password_confirmation" class="block mt-1 sm:w-44 w-36" type="password"
                                 name="password_confirmation" required autocomplete="new-password" />
                         </div>
                     </div>

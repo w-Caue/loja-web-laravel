@@ -21,7 +21,7 @@
                 </svg>
             </div>
             <input type="text" id="search-navbar"
-                class="block w-full p-3 ps-10 text-sm font-semibold text-gray-900 border-2 border-gray-200 rounded-lg bg-white"
+                class=" block w-full p-3 ps-10 text-sm font-semibold text-gray-900 border-2 border-gray-200 rounded-lg bg-white"
                 placeholder="Pesquisa">
         </div>
 
