@@ -156,7 +156,7 @@
 
         </section>
 
-        <section class="mt-20">
+        <section class="container-animation mt-20">
             <div class="flex justify-center flex-col sm:flex-row gap-7 h-full mx-7">
 
                 <article class="rounded-md overflow-hidden">
@@ -197,7 +197,7 @@
             <hr class="h-px w-56 bg-gray-300 border-0 ">
         </div>
 
-        <section>
+        <section class="container-animation">
             <div class="swiper-container h-full grid__content m-12 overflow-hidden">
                 <div class="swiper-wrapper">
 

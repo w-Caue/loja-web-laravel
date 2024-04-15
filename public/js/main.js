@@ -1,33 +1,32 @@
-
 /* Header */
 var slideIndex = 1;
 
 showSlides(slideIndex);
 
 function plusSlides(n) {
-    showSlides(slideIndex += n)
+    showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-    showSlides(slideIndex = n)
+    showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName('mySlides');
+    var slides = document.getElementsByClassName("mySlides");
 
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndex = slides.length;
     }
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].style.display = "none";
     }
 
-    slides[slideIndex - 1].style.display = 'block';
+    slides[slideIndex - 1].style.display = "block";
 }
 
 //auto slide
@@ -36,10 +35,10 @@ showSlidess();
 
 function showSlidess() {
     var i;
-    var slides = document.getElementsByClassName('mySlides');
+    var slides = document.getElementsByClassName("mySlides");
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].style.display = "none";
     }
 
     slideIndex++;
@@ -47,28 +46,27 @@ function showSlidess() {
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
-    slides[slideIndex - 1].style.display = 'block';
+    slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlidess, 3000);
 }
 /* /Header */
 
-
 /* --SWIPER-- */
 /* --Slider Products-- */
-let swiperCards = new Swiper('.card__content', {
+let swiperCards = new Swiper(".card__content", {
     loop: false,
     spaceBetween: 20,
     grapCursor: true,
 
     pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
     },
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 
     breakpoints: {
@@ -85,7 +83,8 @@ let swiperCards = new Swiper('.card__content', {
 });
 /* -/-Slider Products-/- */
 
-let swiperGride = new Swiper('.grid__content', {
+/* --Slider Grid-- */
+let swiperGride = new Swiper(".grid__content", {
     slidesPerView: 4,
 
     grid: {
@@ -95,3 +94,21 @@ let swiperGride = new Swiper('.grid__content', {
 
     spaceBetween: 20,
 });
+/* -/-Slider Grid-/- */
+/* -/-SWIPER-/- */
+
+/* --ANIMATION-- */
+
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+});
+
+const elements = document.querySelectorAll(".container-animation");
+
+elements.forEach((element) => myObserver.observe(element));
