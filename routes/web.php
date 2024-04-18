@@ -25,4 +25,15 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::prefix('/sualoja')->name('ecommerce.')->group(function () {
+
+        Route::get('/minha-conta', function () {
+            return view('ecommerce.profile.conta-usuario');
+        })->name('conta-usuario');
+
+        Route::get('/meus-pedidos', function () {
+            return view('ecommerce.profile.pedidos-usuario');
+        })->name('pedidos-usuario');
+    });
 });
