@@ -32,8 +32,8 @@
     <div x-data="data()" class="min-h-screen">
         @include('nav-menu')
 
-        @include('layouts.ecommerce.sidebar-carrinho')
-        @include('layouts.ecommerce.sidebar-menu')
+        {{-- @include('layouts.ecommerce.sidebar-carrinho')
+        @include('layouts.ecommerce.sidebar-menu') --}}
 
         <!-- Page Content -->
         <main>

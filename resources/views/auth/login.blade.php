@@ -3,27 +3,25 @@
 @section('content')
     <div class="flex justify-around flex-col sm:flex-row mt-5 w-full">
 
-        <div class="sm:w-2/5 mx-2">
-            <div class="flex justify-center items-center my-4">
-                <hr class="h-px w-32 bg-gray-300 border-0 ">
-                <h1 class="text-2xl uppercase font-semibold tracking-widest mx-4 ">Entrar</h1>
-                <hr class="h-px w-32 bg-gray-300 border-0 ">
+        <div class="flex w-3/4 mt-5">
+            <div class="flex justify-center items-center w-full px-6 py-4 bg-white overflow-hidden rounded-l">
+                <h1 class="font-semibold text-4xl">Bem Vindo</h1>
+
+                <x-validation-errors class="mb-4" />
             </div>
 
-            <div class="w-full mt-1 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded">
+            <div class="w-full px-6 py-4 bg-white overflow-hidden rounded-r">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
-                    <div>
-                        <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                            required autofocus autocomplete="username" />
+                    <div class="mt-4">
+                        <x-inputs.input-label class="block" value="{{ __('Email') }}" type="email" name="email"
+                            required autocomplete="email" />
                     </div>
 
                     <div class="mt-4">
-                        <x-label for="password" value="{{ __('Senha') }}" />
-                        <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                            autocomplete="current-password" />
+                        <x-inputs.input-label for="password" id="password" class="block" value="{{ __('Senha') }}" type="password" name="password"
+                            required autocomplete="new-password" />
                     </div>
 
                     <div class="block mt-4">
@@ -47,82 +45,9 @@
                     </div>
                 </form>
             </div>
+
         </div>
-
-        <div class="sm:w-2/5 mx-2">
-            <div class="flex justify-center items-center my-4">
-                <hr class="h-px w-32 bg-gray-300 border-0 ">
-                <h1 class="text-2xl uppercase font-semibold tracking-widest mx-4 ">Se Cadastre</h1>
-                <hr class="h-px w-32 bg-gray-300 border-0 ">
-            </div>
-
-            <div class="w-full mt-1 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded">
-                <form method="POST" action="{{ route('register') }}">
-                    @csrf
-
-                    <div>
-                        <x-label for="name" value="{{ __('Nome') }}" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
-                            required autofocus autocomplete="name" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                            required autocomplete="username" />
-                    </div>
-
-                    <div class="flex gap-7 mt-4">
-                        <div>
-                            <x-label for="password" value="{{ __('Senha') }}" />
-                            <x-input id="password" class="block mt-1 sm:w-44 w-36" type="password" name="password" required
-                                autocomplete="new-password" />
-                        </div>
-
-                        <div>
-                            <x-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
-                            <x-input id="password_confirmation" class="block mt-1 sm:w-44 w-36" type="password"
-                                name="password_confirmation" required autocomplete="new-password" />
-                        </div>
-                    </div>
-
-                    @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                        <div class="mt-4">
-                            <x-label for="terms">
-                                <div class="flex items-center">
-                                    <x-checkbox name="terms" id="terms" required />
-
-                                    <div class="ms-2">
-                                        {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                            'terms_of_service' =>
-                                                '<a target="_blank" href="' .
-                                                route('terms.show') .
-                                                '" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">' .
-                                                __('Terms of Service') .
-                                                '</a>',
-                                            'privacy_policy' =>
-                                                '<a target="_blank" href="' .
-                                                route('policy.show') .
-                                                '" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">' .
-                                                __('Privacy Policy') .
-                                                '</a>',
-                                        ]) !!}
-                                    </div>
-                                </div>
-                            </x-label>
-                        </div>
-                    @endif
-
-                    <div class="flex items-center justify-end mt-4">
-                        <x-button class="ms-4">
-                            {{ __('Cadastrar-se') }}
-                        </x-button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
     </div>
 
-    <x-footer class=""></x-footer>
+    {{-- <x-footer class=""></x-footer> --}}
 @endsection

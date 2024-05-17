@@ -1,36 +1,30 @@
 @extends('layouts.ecommerce')
 
 @section('content')
-    <nav class="hidden sm:block bg-white">
-        <hr class="h-px mx-72 bg-gray-200 border-0 ">
-        <div class="flex justify-center items-center gap-7 p-2 uppercase">
-            <a href=""
-                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Promoções</a>
-            <a href=""
-                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Camisas</a>
-            <a href=""
-                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Novidades</a>
-            <a href=""
-                class="text-md font-bold tracking-widest hover:scale-95 hover:text-blue-600 transition-all">Destaques</a>
+    <main class="grid lg:grid-cols-2 place-items-center mx-6 pt-16 pb-8 md:pt-8">
+        <div class="py-6 md:order-1 hidden md:block">
+            <img src="https://private-user-images.githubusercontent.com/123313244/299048076-dd1c4271-0777-4c05-b4be-198ec5899800.png"
+                alt="Astronaut in the air" loading="eager" format="avif" />
         </div>
-    </nav>
-
-    <section class="">
-        <div class="relative lg:mt-0 lg:col-span-10 lg:flex">
-            <div class="slideshow-container ">
-
-                <div class="mySlides fade">
-                    <img src="image/1.png" alt="" class="rounded-b-lg w-full h-52 sm:h-auto">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="image/2.png" alt="" class="rounded-b-lg w-full h-52 sm:h-auto">
-
-                </div>
-
+        <div>
+            <h1 class="text-lg"><span class="font-bold text-slate-800">Academia</span><span
+                    class="text-purple-500 font-semibold">Web</span>
+            </h1>
+            <h1
+                class="max-w-2xl mb-4 text-gray-800 text-4xl font-extrabold leading-none tracking-tight md:text-4xl xl:text-6xl">
+                Sistema para a sua Academia
+            </h1>
+            <p class="text-lg mt-4 text-slate-600 max-w-xl">
+                Transforme a maneira como você administra seu negócio com o nosso avançado Sistema de Gestão,
+                um ERP online projetado para otimizar todos os aspectos da sua operação.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="#" class="text-white font-semibold bg-purple-500 p-2 rounded">Virar Membro</a>
+                <a class="text-black font-semibold border-2 border-black p-2 rounded">Ver planos
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
     <main>
 
@@ -118,8 +112,7 @@
 
                         <article class="w-55 rounded-md overflow-hidden bg-white swiper-slide">
                             <div class="relative pt-2 mb-[-44px]">
-                                <img src="image/img/6.jpeg" alt=""
-                                    class="relative h-64 z-10 my-0 mx-auto rounded">
+                                <img src="image/img/6.jpeg" alt="" class="relative h-64 z-10 my-0 mx-auto rounded">
                             </div>
 
                             <div id="card__data" class="relative z-20 bg-gray-200 rounded-lg p-2 text-center">
@@ -137,7 +130,8 @@
 
 
                 <!-- Navigation buttons -->
-                <div class="swiper-button-prev left-0 w-9 h-9 bg-gray-300 rounded-full opacity-30 hover:opacity-75 transition-all after:contents">
+                <div
+                    class="swiper-button-prev left-0 w-9 h-9 bg-gray-300 rounded-full opacity-30 hover:opacity-75 transition-all after:contents">
                     <svg xmlns="http://www.w3.org/1600/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z">
@@ -145,7 +139,8 @@
                     </svg>
                 </div>
 
-                <div class="swiper-button-next right-0 w-9 h-9 bg-gray-300 rounded-full opacity-30 hover:opacity-75 transition-all after:contents">
+                <div
+                    class="swiper-button-next right-0 w-9 h-9 bg-gray-300 rounded-full opacity-30 hover:opacity-75 transition-all after:contents">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
