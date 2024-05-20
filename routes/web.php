@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PessoalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,7 @@ Route::middleware([
             return view('pages.pessoal.index');
         })->name('index');
 
-        // Route::get('/{codigo}', [PessoalController::class, 'show'])->name('show');
+        Route::get('/{codigo}', [PessoalController::class, 'show'])->name('show');
 
     });
 

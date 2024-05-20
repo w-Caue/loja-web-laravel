@@ -49,6 +49,6 @@
         </nav>
     </div>
 
-    @livewire('Pessoal.CadastroPessoas', ['codigo' => $codigo])
+    @livewire('Pessoal.CadastroPessoa', ['codigo' => $codigo])
 
 </x-app-layout>

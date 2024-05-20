@@ -12,34 +12,44 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+   <!-- Scripts -->
+   @vite(['resources/css/app.css', 'resources/js/app.js'])
+   <style>
+       [x-cloak] {
+           display: none;
+       }
+   </style>
 
-    <!-- Styles -->
-    @livewireStyles
+   <!-- Styles -->
+   @livewireStyles
 </head>
 
 <body class="font-sans antialiased">
 
-    <div class="flex h-screen bg-gray-200 dark:bg-gray-900">
-        @include('layouts.admin.navbar')
+   <div class="flex h-screen bg-gray-200 dark:bg-gray-900">
+       @include('layouts.admin.navbar')
 
-        @include('layouts.admin.sidebar')
+       @include('layouts.admin.sidebar')
 
-        <div class="flex flex-col flex-1 w-full mt-16">
-            <main class="h-full pb-16 overflow-y-auto">
-                <!-- Remove everything INSIDE this div to a really blank page -->
-                <div class="container px-6 mx-auto grid">
-                    {{ $slot }}
-                </div>
-            </main>
-        </div>
+       <div class="flex flex-col flex-1 w-full mt-16">
+           <main class="h-full pb-16 overflow-y-auto">
+               <!-- Remove everything INSIDE this div to a really blank page -->
+               <div class="container px-6 mx-auto grid">
+                   {{ $slot }}
+               </div>
+           </main>
+       </div>
 
-    </div>
+   </div>
 
-    @stack('modals')
+   @stack('modals')
 
-    @livewireScripts
+   @livewireScripts
+   @livewireScriptConfig
+
+   {{-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <x-livewire-alert::scripts /> --}}
 </body>
 
 <script>
