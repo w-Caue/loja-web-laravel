@@ -4,8 +4,13 @@
     <div class="flex justify-around flex-col sm:flex-row mt-5 w-full">
 
         <div class="flex w-3/4 mt-5">
-            <div class="flex justify-center items-center w-full px-6 py-4 bg-white overflow-hidden rounded-l">
-                <h1 class="font-semibold text-4xl">Bem Vindo</h1>
+            <div class="flex flex-col justify-center items-center w-full px-6 py-4 bg-white overflow-hidden rounded-l">
+                <h1 class="font-semibold text-4xl">Olá Amigo</h1>
+                <p class="font-semibold text-sm text-gray-500">Insira seus dados pessoais e comece a jornada conosco</p>
+
+                <x-links.link-outline href="{{ route('register') }}" class="mt-6">
+                    {{ __('Fazer Cadastro') }}
+                </x-links.link-outline>
 
                 <x-validation-errors class="mb-4" />
             </div>
@@ -20,8 +25,8 @@
                     </div>
 
                     <div class="mt-4">
-                        <x-inputs.input-label for="password" id="password" class="block" value="{{ __('Senha') }}" type="password" name="password"
-                            required autocomplete="new-password" />
+                        <x-inputs.input-label for="password" id="password" class="block" value="{{ __('Senha') }}"
+                            type="password" name="password" required autocomplete="new-password" />
                     </div>
 
                     <div class="block mt-4">
@@ -31,7 +36,7 @@
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex flex-col items-center justify-center mt-4">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 href="{{ route('password.request') }}">
@@ -39,9 +44,12 @@
                             </a>
                         @endif
 
-                        <x-button class="ms-4">
+                        {{-- <x-button class="ms-4">
                             {{ __('Entrar') }}
-                        </x-button>
+                        </x-button> --}}
+                        <x-buttons.button class="mt-6">
+                            {{ __('Entrar') }}
+                        </x-buttons.button>
                     </div>
                 </form>
             </div>

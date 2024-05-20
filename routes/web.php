@@ -26,6 +26,15 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
+    Route::prefix('/pessoal')->name('pessoal.')->group(function () {
+        Route::get('/', function () {
+            return view('pages.pessoal.index');
+        })->name('index');
+
+        // Route::get('/{codigo}', [PessoalController::class, 'show'])->name('show');
+
+    });
+
     Route::prefix('/sualoja')->name('ecommerce.')->group(function () {
 
         Route::get('/minha-conta', function () {

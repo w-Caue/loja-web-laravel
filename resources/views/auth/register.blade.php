@@ -4,8 +4,15 @@
     <div class="flex justify-center items-center flex-col sm:flex-row mt-5 w-full">
 
         <div class="flex w-3/4 mt-5">
-            <div class="flex justify-center items-center w-full px-6 py-4 bg-white overflow-hidden sm:rounded-l">
-                <h1 class="font-semibold text-4xl">Bem Vindo</h1>
+            <div class="flex flex-col justify-center items-center w-full px-6 py-4 bg-white overflow-hidden sm:rounded-l">
+                <h1 class="font-semibold text-4xl">
+                    Bem Vindo de Volta
+                </h1>
+                <p class="font-semibold text-sm text-gray-500">Para se manter conectado conosco, preencha com suas informações</p>
+
+                <x-links.link-outline href="{{ route('login') }}" class="mt-6">
+                    {{ __('Fazer Login') }}
+                </x-links.link-outline>
 
                 <x-validation-errors class="mb-4" />
             </div>
@@ -30,14 +37,14 @@
                     </div>
 
                     <div class="flex gap-7 mt-4">
-                        <div>
-                            <x-inputs.input-label for="password" id="password" class="block" value="{{ __('Senha') }}" type="password" name="password"
-                                required autocomplete="new-password" />
+                        <div class="w-full">
+                            <x-inputs.input-label for="password" id="password" class="block " value="{{ __('Senha') }}"
+                                type="password" name="password" required autocomplete="new-password" />
                         </div>
 
-                        <div>
-                            <x-inputs.input-label class="block" value="{{ __('Confirmar Senha') }}" type="password" name="password_confirmation"
-                                required autocomplete="password_confirmation" />
+                        <div class="w-full">
+                            <x-inputs.input-label class="block" value="{{ __('Confirmar Senha') }}" type="password"
+                                name="password_confirmation" required autocomplete="password_confirmation" />
                         </div>
                     </div>
 
@@ -69,9 +76,12 @@
                     @endif
 
                     <div class="flex items-center justify-center mt-4">
-                        <x-button class="ms-4">
+                        {{-- <x-button class="ms-4">
                             {{ __('Cadastrar-se') }}
-                        </x-button>
+                        </x-button> --}}
+                        <x-buttons.button class="mt-1">
+                            {{ __('Cadastrar-se') }}
+                        </x-buttons.button>
                     </div>
                 </form>
             </div>
