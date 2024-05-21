@@ -9,8 +9,7 @@ use Livewire\Form;
 class CadastroPessoaForm extends Form
 {
     public $codigo;
-    public $nome = '';
-    public $nomeContato;
+    public $name = '';
     public $email;
     public $whatsapp;
     public $dataNascimento;
@@ -21,19 +20,17 @@ class CadastroPessoaForm extends Form
 
     public function pessoa($codigo)
     {
-        $pessoa = User::where('id', '=', $codigo)->get()->first();
+        $pessoa = User::where('id', '=', $codigo)
+            ->leftjoin('information_users', 'information_users.user_id', '=', 'users.id')
+            ->get()->first();
 
         // dd($pessoa);
 
         $this->codigo = $pessoa->id;
-        // $this->nome = $pessoa->nome;
-        // $this->nomeContato = $pessoa->nome_contato;
-        // $this->email = $pessoa->email;
-        // $this->whatsapp = $pessoa->whatsapp;
-        // $this->dataNascimento = date('Y-m-d', strtotime($pessoa->data_nascimento));
-        // $this->dataCadastro = date('Y-m-d', strtotime($pessoa->created_at));
-        // $this->tipoCliente = $pessoa->tipo_cliente;
-        // $this->tipoFuncionario = $pessoa->tipo_funcionario;
-        // $this->tipoFornecedor = $pessoa->tipo_fornecedor;
+        $this->name = $pessoa->name;
+        $this->email = $pessoa->email;
+        $this->whatsapp = $pessoa->numero;
+        $this->dataNascimento = date('Y-m-d', strtotime($pessoa->data_nascimento));
+        $this->dataCadastro = date('Y-m-d', strtotime($pessoa->created_at));
     }
 }
