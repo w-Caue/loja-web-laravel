@@ -52,7 +52,7 @@
                                 @include('includes.icon-filter', ['field' => 'whatsapp'])
                             </div>
                         </th>
-                        <th class="px-4 py-3">Status</th>
+                        {{-- <th class="px-4 py-3">Status</th> --}}
                         <th class="px-4 py-3">Data Cadastro</th>
                         <th class="px-4 py-3">Ações</th>
                     </tr>
@@ -85,7 +85,7 @@
                             <td class="px-4 py-3 text-sm">
                                 {{ $pessoa->numero }}
                             </td>
-                            <td class="px-4 py-3 text-xs">
+                            {{-- <td class="px-4 py-3 text-xs">
                                 @if ($pessoa->status == 'Ativo')
                                     <span
                                         class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
@@ -97,7 +97,7 @@
                                         {{ $pessoa->status }}
                                     </span>
                                 @endif
-                            </td>
+                            </td> --}}
                             <td class="px-4 py-3 text-sm">
                                 {{ date('d/m/Y', strtotime($pessoa->created_at)) }}
                             </td>

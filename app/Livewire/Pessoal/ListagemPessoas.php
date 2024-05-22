@@ -50,7 +50,7 @@ class ListagemPessoas extends Component
                 'users.type',
                 'users.created_at',
                 'information_users.numero',
-                'information_users.status',
+                // 'information_users.status',
             ]
         )
             ->leftjoin('information_users', 'information_users.user_id', '=', 'users.id');
