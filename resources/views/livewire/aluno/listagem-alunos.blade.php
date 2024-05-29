@@ -1,5 +1,5 @@
 <div>
-    <div class="w-full">
+    <div class="w-full my-4">
         <div class="flex justify-between mx-5 py-3">
             <div class="relative mt-2">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -15,8 +15,8 @@
             </div>
 
             <div class="fle justify-center items-center gap-1">
-                <x-buttons.button-primary x-data x-on:click="$dispatch('open-modal-md')" x-data="{ isOpen: false }"
-                    x-on:mouseover="isOpen = true" x-on:mouseleave="isOpen = false">
+                <x-buttons.button-primary x-data x-on:click="$dispatch('open-modal-md')" x-data="{ isOpen: false }" x-on:mouseover="isOpen = true"
+                    x-on:mouseleave="isOpen = false">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path>
                     </svg>
@@ -144,8 +144,8 @@
 
     </div>
 
-    <!-- Listagem Mobile -->
-    {{-- <div class="w-full sm:hidden md:hidden lg:hidden">
+    {{-- Listagem Mobile --}}
+    <div class="w-full sm:hidden md:hidden lg:hidden">
         <div class="flex flex-col justify-center">
             @foreach ($pessoas as $pessoa)
                 <div wire:key="{{ $pessoa->id }}"
@@ -189,8 +189,8 @@
             @endforeach
 
         </div>
-    </div> --}}
-    <!-- /Listagem Mobile -->
+    </div>
+    {{-- /Listagem Mobile --}}
 
     {{-- <div class="mx-2 mt-2">
         {{ $this->dados()->links('layouts.paginate') }}

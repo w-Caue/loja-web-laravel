@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Livewire\Pessoal;
+namespace App\Livewire\Aluno;
 
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ListagemPessoas extends Component
+class ListagemAlunos extends Component
 {
-    // use LivewireAlert;
-
     use WithPagination;
 
     public $pessoa;
@@ -54,7 +52,7 @@ class ListagemPessoas extends Component
             ]
         )
             ->leftjoin('information_users', 'information_users.user_id', '=', 'users.id')
-            ->where('users.type', '!=', 'aluno');
+            ->where('users.type', '=', 'aluno');
         #Filtros
         // ->when($this->pesquisa, function ($query) {
         //     $filter = strtolower($this->sortField);
