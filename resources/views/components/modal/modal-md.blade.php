@@ -9,7 +9,7 @@
         <div x-on:click ="open = false" class="fixed">
         </div>
         <div
-            class="w-full px-6 py-4 overflow-hidden bg-gradient-to-r from-gray-800 to-gray-700 border rounded-t dark:text-gray-400 dark:border-gray-700 sm:rounded sm:m-4 sm:max-w-xl">
+            class="w-full px-6 py-4 overflow-hidden border rounded-t dark:text-gray-400 dark:bg-gray-800 dark:border-gray-700 sm:rounded sm:m-4 sm:max-w-xl">
             <div class="flex justify-between items-center mx-1 mb-5">
                 <h1 class="text-md tracking-widest uppercase text-gray-300 font-semibold">{{ $title ?? '' }}</h1>
                 <button

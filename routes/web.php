@@ -27,15 +27,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::prefix('/alunos')->name('alunos.')->group(function () {
-        Route::get('/', function () {
-            return view('pages.aluno.index');
-        })->name('index');
-
-        // Route::get('/{codigo}', [PessoalController::class, 'show'])->name('show');
-
-    });
-
     Route::prefix('/pessoal')->name('pessoal.')->group(function () {
         Route::get('/', function () {
             return view('pages.pessoal.index');
